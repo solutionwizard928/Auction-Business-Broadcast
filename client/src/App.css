@@ -1,0 +1,89 @@
+.css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.css-ittuaa-MuiInputAdornment-root {
+    color: white;
+}
+
+#input-with-icon-textfield {
+    color: white;
+}
+
+.css-1o9s3wi-MuiInputBase-input-MuiOutlinedInput-input {
+    color: white !important;
+    padding: 13.5px 14px;   
+}
+
+
+.css-i4bv87-MuiSvgIcon-root {
+    color: white;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-width: 0px !important;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: rgb(33, 33, 33) !important;
+    color :white;
+}
+
+.css-j204z7-MuiFormControlLabel-root {
+    margin-right: 0px !important;
+}
+
+.css-wbymbd-MuiSwitch-root {
+    margin-left: 2px !important;
+}
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+    color : white !important;
+}
+
+.css-1xlpby5 {
+    width: 80px !important;
+    height: 0px !important;
+}
+
+@media only screen and (max-width: 992px) {
+    #btn_sidebar_menu {
+        display: none !important;
+    }
+
+    #btn_broadcast {
+        display: none !important;
+    }
+
+    #outlined-start-adornment {
+        display: none !important;
+    }
+
+    #icon_menu_search {
+        display: none !important;
+    }
+}
+
+.css-xmmkky {
+    background-color: #353535 !important;
+    border:0px solid #2b2a2a !important;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+    color: white !important;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+    color: white !important;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    #btn_broadcast {
+        display: none !important;
+    }
+    #delete_icon_btn {
+        display: none !important;
+    }
+}

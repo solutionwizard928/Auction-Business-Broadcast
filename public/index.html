@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Message</title>
+</head>
+<body>
+  <h1>Send Message</h1>
+  <form id="messageForm">
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+    <label for="images">Images:</label><br>
+    <input type="file" id="images" name="images" multiple><br>
+    <label for="phoneNumbers">Phone Numbers (comma-separated):</label><br>
+    <input type="text" id="phoneNumbers" name="phoneNumbers"><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+<script>
+    document.getElementById('messageForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const message = document.getElementById('message').value;
+  const images = document.getElementById('images').files;
+  const phoneNumbers = document.getElementById('phoneNumbers').value.split(',');
+
+  const formData = new FormData();
+  formData.append('message', message);
+  for (let i = 0; i < images.length; i++) {
+    formData.append('images', images[i]);
+  }
+  formData.append('phoneNumbers', JSON.stringify(phoneNumbers));
+
+  try {
+    const response = await fetch('/messages/send', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      alert('Messages sent successfully');
+    } else {
+      alert('Failed to send messages');
+    }
+  } catch (error) {
+    console.error(error);
+    alert('An error occurred');
+  }
+});
+</script>
+</html>
